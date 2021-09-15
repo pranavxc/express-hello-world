@@ -28,7 +28,7 @@ app.use(express.static('public', options))
 // Catch all handler for all other request.
 app.use('*', (req,res) => {
   res.json({
-      msg: 'Great Day',
+      msg: 'This magic moment',
       at: new Date().toISOString(),
       method: req.method,
       hostname: req.hostname,
