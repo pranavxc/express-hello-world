@@ -31,7 +31,7 @@ app.use('*', (req,res) => {
   var region = (process.env.region)? process.env.region : 'undefined'
   console.error(region)
   res.json({
-      message: 'Demo Active-Active',
+      message: 'Demo',
       region,
       at: new Date().toISOString(),
       method: req.method,
