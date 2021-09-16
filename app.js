@@ -27,9 +27,11 @@ app.use(express.static('public', options))
 // #############################################################################
 // Catch all handler for all other request.
 app.use('*', (req,res) => {
+  var region = (process.env.region)? process.env.region : 'undefined'
+  console.error(region)
   res.json({
       message: 'Multi-region',
-      region: (process.env.region)? process.env.region : 'undefined',
+      region,
       at: new Date().toISOString(),
       method: req.method,
       hostname: req.hostname,
