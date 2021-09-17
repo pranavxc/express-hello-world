@@ -7,6 +7,9 @@ const app = express()
 app.use(function (req, res, next) {
   res.set('x-timestamp', Date.now())
   res.set('x-powered-by', 'cyclic.sh')
+  if (process.env.region && process.env.region === 'us-east-2){
+      res.status(500).send('error')
+  }
   console.log(`[${new Date().toISOString()}] ${req.ip} ${req.method} ${req.path}`);
   next();
 });
