@@ -8,10 +8,10 @@ app.use(function (req, res, next) {
   res.set('x-timestamp', Date.now())
   res.set('x-powered-by', 'cyclic.sh')
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
-//   let region = process.env.region
-//   if (region && region === 'us-west-2'){
-//       return res.status(500).json({'message':'error',region})
-//   }
+  let region = process.env.region
+  if (region && region === 'us-west-2'){
+      return res.status(500).json({'message':'error',region})
+  }
   next();
 });
 
@@ -35,7 +35,7 @@ app.use('*', (req,res) => {
   var region = (process.env.region)? process.env.region : 'undefined'
   console.error(region)
   res.json({
-      message: 'Multi-regional',
+      message: 'Fail',
       region,
       at: new Date().toISOString(),
       params: req.params,
