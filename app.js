@@ -7,7 +7,7 @@ const app = express()
 app.use(function (req, res, next) {
   res.set('x-timestamp', Date.now())
   res.set('x-powered-by', 'cyclic.sh')
-  console.log(`[${new Date().toISOString()}] ${req.ip} ${req.method} ${req.path}`);
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
 //   let region = process.env.region
 //   if (region && region === 'us-east-2'){
 //       return res.status(500).json({'message':'error',region})
@@ -35,15 +35,9 @@ app.use('*', (req,res) => {
   var region = (process.env.region)? process.env.region : 'undefined'
   console.error(region)
   res.json({
-      message: 'echo',
+      message: 'Multi-region example',
       region,
       at: new Date().toISOString(),
-      method: req.method,
-      hostname: req.hostname,
-      ip: req.ip,
-      query: req.query,
-      headers: req.headers,
-      cookies: req.cookies,
       params: req.params,
       env: process.env
     })
