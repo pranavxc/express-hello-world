@@ -39,7 +39,8 @@ app.use('*', (req,res) => {
       region,
       at: new Date().toISOString(),
       params: req.params,
-      env: process.env
+      env: process.env,
+      headers: req.headers
     })
     .end()
 })
