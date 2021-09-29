@@ -42,7 +42,7 @@ app.use('/e/*', (req,res,next) => {
 app.use('*', (req,res) => {
   var region = (process.env.region)? process.env.region : 'undefined'
   res.json({
-      message: 'msg: all clear',
+      message: 'msg: good to go',
       region,
       path: req.originalUrl,
       at: new Date().toISOString(),
