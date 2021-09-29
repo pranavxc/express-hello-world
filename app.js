@@ -31,6 +31,7 @@ app.use(express.static('public', options))
 // #############################################################################
 // Log echo requests
 app.use('/e/*', (req,res,next) => {
+  var region = (process.env.region)? process.env.region : 'undefined'
   console.log(`[${region}] ${req.method} ${req.path}`);
   next()
 })
