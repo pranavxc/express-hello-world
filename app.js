@@ -33,7 +33,7 @@ app.use(express.static('public', options))
 app.use('/e/*', (req,res,next) => {
   console.log(`[${region}] ${req.method} ${req.path}`);
   next()
-}
+})
 
 // #############################################################################
 // Catch all handler for all other request.
