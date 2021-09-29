@@ -7,10 +7,10 @@ const app = express()
 app.use(function (req, res, next) {
   res.set('x-timestamp', Date.now())
   res.set('x-powered-by', 'cyclic.sh')
-  let region = process.env.region
-  if (region && region === 'us-east-2'){
-      return res.status(500).json({'message':'error',region})
-  }
+//   let region = process.env.region
+//   if (region && region === 'us-east-2'){
+//       return res.status(500).json({'message':'error',region})
+//   }
   next();
 });
 
