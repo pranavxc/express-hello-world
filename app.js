@@ -29,12 +29,18 @@ app.use(express.static('public', options))
 
 
 // #############################################################################
+// Log echo requests
+app.use('/e/*', (req,res,next) => {
+  console.log(`[${region}] ${req.method} ${req.path}`);
+  next()
+}
+
+// #############################################################################
 // Catch all handler for all other request.
 app.use('*', (req,res) => {
   var region = (process.env.region)? process.env.region : 'undefined'
-  console.log(`[${region}] ${req.method} ${req.path}`);
   res.json({
-      message: 'msg: first',
+      message: 'msg: Start',
       region,
       at: new Date().toISOString(),
       params: req.params,
