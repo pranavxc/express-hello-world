@@ -19,6 +19,4 @@ This is a basic Expressjs app with static file hosting and
 - The Cyclic runtime expects a file in the root of your project named `server.js`
 - The runtime will `node .` which runs your `server.js` by default.
 
-Thats it.
-
-Let us know what you think.
+Thats it. Let us know what you think.
