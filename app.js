@@ -40,10 +40,10 @@ app.use('/e/*', (req,res,next) => {
 // #############################################################################
 // Catch all handler for all other request.
 app.use('*', (req,res) => {
-  var region = (process.env.region)? process.env.region : 'undefined'
+//   var region = (process.env.region)? process.env.region : 'undefined'
   res.json({
       message: 'msg: have a nice day',
-      region,
+//       region,
       path: req.originalUrl,
       at: new Date().toISOString(),
       params: req.params,
