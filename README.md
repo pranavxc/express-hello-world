@@ -14,9 +14,4 @@ This is a basic Expressjs app with static file hosting and
 - Browser: `http://localhost:3000/some/path?q=query+one&q=second+query&single=value`
 - Commandline: `curl -i -XGET "http://localhost:3000/cmd/line-curl"`
 
-## Cyclic Runtime
-
-- The Cyclic runtime expects a file in the root of your project named `server.js`
-- The runtime will `node .` which runs your `server.js` by default.
-
-Thats it. Let us know what you think.
+Check out the docs.
