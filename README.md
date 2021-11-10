@@ -14,4 +14,4 @@ This is a basic Expressjs app with static file hosting and
 - Browser: `http://localhost:3000/some/path?q=query+one&q=second+query&single=value`
 - Commandline: `curl -i -XGET "http://localhost:3000/cmd/line-curl"`
 
-Check out the docs.
+Check out the docs https://docs.cyclic.sh
