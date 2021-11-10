@@ -1,4 +1,4 @@
-# Cyclic Hello World
+# Cyclic: Express Hello World
 
 This is a basic Expressjs app with static file hosting and 
 
