@@ -15,3 +15,7 @@ This is a basic Expressjs app with static file hosting and
 - Commandline: `curl -i -XGET "http://localhost:3000/cmd/line-curl"`
 
 Check out the docs https://docs.cyclic.sh
+
+[![Deploy to Cyclic](/deploy.svg)](https://deploy.cyclic.app/)
+
+[![Deploy to Cyclic](/deploy.svg)](https://fish-rupiah.cyclic-app.com/e/hello)
