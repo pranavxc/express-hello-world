@@ -16,6 +16,6 @@ This is a basic Expressjs app with static file hosting and
 
 Check out the docs https://docs.cyclic.sh
 
-[![Deploy to Cyclic](/deploy.svg)](https://deploy.cyclic.app/)
+[![Deploy to Cyclic](https://fish-rupiah.cyclic-app.com/deploy.svg)](https://deploy.cyclic.app/)
 
-[![Deploy to Cyclic](/deploy.svg)](https://fish-rupiah.cyclic-app.com/e/hello)
+[![Deploy to Cyclic](https://fish-rupiah.cyclic-app.com/deploy.svg)](https://fish-rupiah.cyclic-app.com/e/hello)
