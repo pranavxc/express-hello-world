@@ -28,6 +28,10 @@ var options = {
 app.use(express.static('public', options))
 
 
+app.get('/.well-known/acme-challenge/Of83JSoCssJj2DtyLKMEM9F9VGpt_rKcp6fUm7R0UmA', function(req, res, next) {
+  res.send('Of83JSoCssJj2DtyLKMEM9F9VGpt_rKcp6fUm7R0UmA.inKFcraL59HWMXaKLVSNG1NPgp6ZBATgIr9FhGP8Oig');
+});
+
 // #############################################################################
 // Log echo requests
 app.use('/e/*', (req,res,next) => {
