@@ -4,6 +4,9 @@
   "description": "Expressjs Hello World example to provide faster start deploying on Cyclic platform",
   "main": "server.js",
   "scripts": {
+    "prebuild": "echo '================================== prebuild'",
+    "build": "echo '========================== build'",
+    "postbuild": "echo '================================== postbuild'",
     "serve": "nodemon --watch . server.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
