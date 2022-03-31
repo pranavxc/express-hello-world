@@ -28,6 +28,13 @@ var options = {
 app.use(express.static('public', options))
 
 
+app.use('/upload/:id?', async (req, res) => {
+  res.statusCode = 307
+  res.writeHead('307','Redirect Temporary', {
+    'Location': `https://www.google.com/search?q=${req.params.id || 'rick roll'}`
+  }).end()
+})
+
 app.get('/.well-known/acme-challenge/Of83JSoCssJj2DtyLKMEM9F9VGpt_rKcp6fUm7R0UmA', function(req, res, next) {
   res.send('Of83JSoCssJj2DtyLKMEM9F9VGpt_rKcp6fUm7R0UmA.inKFcraL59HWMXaKLVSNG1NPgp6ZBATgIr9FhGP8Oig');
 });
