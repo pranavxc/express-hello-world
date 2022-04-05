@@ -12,7 +12,7 @@
     "postprepare": "echo 'postprepare'",
     "prebuild": "echo '==== prebuild'",
     "build": "echo '==== build'",
-    "postbuild": "echo ==== postbuild'",
+    "postbuild": "echo '==== postbuild'",
     "dev": "nodemon --watch . server.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
