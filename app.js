@@ -27,6 +27,11 @@ var options = {
 }
 app.use(express.static('public', options))
 
+app.use('/status/:code?', async (req, res) => {
+  res.statusCode = req.params.code || 200
+  res.send(`Sending status: ${res.statusCode}`)
+  res.end()
+})
 
 app.use('/upload/:id?', async (req, res) => {
   res.statusCode = 307
