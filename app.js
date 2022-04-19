@@ -27,6 +27,10 @@ var options = {
 }
 app.use(express.static('public', options))
 
+app.use('/error', async (req, res) => {
+  throw new Error('Forcing an error')
+})
+
 app.use('/status/:code?', async (req, res) => {
   res.statusCode = req.params.code || 200
   res.send(`Sending status: ${res.statusCode}`)
