@@ -26,9 +26,8 @@ var options = {
   redirect: false
 }
 app.use(express.static('public', options))
-xyz.error()
+
 app.use('/error', async (req, res) => {
-  xyz.error()
   throw new Error('Forcing an error')
 })
 
