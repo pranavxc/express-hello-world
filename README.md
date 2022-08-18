@@ -39,4 +39,3 @@ Ask a question or give us a shout out:
 - 💌 hello@cyclic.sh
 - 🐣 https://twitter.com/cyclicsoftware
 
-🌎
