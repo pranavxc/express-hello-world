@@ -1,4 +1,5 @@
 const express = require('express')
+const axios = require('axios');
 const path = require("path");
 const app = express()
 
@@ -26,6 +27,21 @@ var options = {
   redirect: false
 }
 app.use(express.static('public', options))
+
+app.use('/curl', async (req,res) => {
+  console.log(req)
+  if (req.query.url) {
+    try {
+      let data = await axios.get(req.query.url).data
+      res.json(data)
+    } catch(error){
+      res.json({"error":JSON.stringify(error)})
+    }
+  } else {
+    res.json({"error":"missing url query parameter"})
+  }
+  res.end()
+})
 
 app.use('/error', async (req, res) => {
   throw new Error('Forcing an error')
