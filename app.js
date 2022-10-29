@@ -6,8 +6,9 @@ const app = express()
 // #############################################################################
 // Logs all request paths and method
 app.use(function (req, res, next) {
-  res.set('x-timestamp', Date.now())
-  res.set('x-powered-by', 'cyclic.sh')
+  console.log(`req for ${req.originalUrl}`)
+//   res.set('x-timestamp', Date.now())
+//   res.set('x-powered-by', 'cyclic.sh')
 //   let region = process.env.region
 //   if (region && region === 'us-east-2'){
 //       return res.status(500).json({'message':'error',region})
@@ -18,15 +19,15 @@ app.use(function (req, res, next) {
 // #############################################################################
 // This configures static hosting for files in /public that have the extensions
 // listed in the array.
-var options = {
-  dotfiles: 'ignore',
-  etag: false,
-  extensions: ['htm', 'html','css','js','ico','jpg','jpeg','png','svg'],
-  index: ['index.html'],
-  maxAge: '1m',
-  redirect: false
-}
-app.use(express.static('public', options))
+// var options = {
+//   dotfiles: 'ignore',
+//   etag: false,
+//   extensions: ['htm', 'html','css','js','ico','jpg','jpeg','png','svg'],
+//   index: ['index.html'],
+//   maxAge: '1m',
+//   redirect: false
+// }
+// app.use(express.static('public', options))
 
 app.use('/curl', async (req,res) => {
   console.log(req)
